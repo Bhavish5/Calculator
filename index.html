@@ -7,39 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Calculator</h1>
     <div class="calculator">
         <div class="head">
-            <input type="text">
-            <button class="clear">C</button>
+            <input type="text" id="input">
+            <button class="clear" onclick="clear()">C</button>
         </div>
         <div class="body">
             <table>
                 <tr>
-                    <td><button class="number">1</button></td>
-                    <td><button class="number">2</button></td>
-                    <td><button class="number">3</button></td>
-                    <td><button class="number">/</button></td>
+                    <td><button class="number" onclick="inputNum(1)">1</button></td>
+                    <td><button class="number" onclick="inputNum(2)">2</button></td>
+                    <td><button class="number" onclick="inputNum(3)">3</button></td>
+                    <td><button class="number" onclick="inputNum('/')"">/</button></td>
                 </tr>
                 <tr>
-                    <td><button class="number">4</button></td>
-                    <td><button class="number">5</button></td>
-                    <td><button class="number">6</button></td>
-                    <td><button class="number">-</button></td>
+                    <td><button class="number" onclick="inputNum(4)">4</button></td>
+                    <td><button class="number" onclick="inputNum(5)">5</button></td>
+                    <td><button class="number" onclick="inputNum(6)">6</button></td>
+                    <td><button class="number" onclick="inputNum('-')">-</button></td>
                 </tr>
                 <tr>
-                    <td><button class="number">7</button></td>
-                    <td><button class="number">8</button></td>
-                    <td><button class="number">9</button></td>
-                    <td><button class="number">+</button></td>
+                    <td><button class="number" onclick="inputNum(7)">7</button></td>
+                    <td><button class="number" onclick="inputNum(8)">8</button></td>
+                    <td><button class="number" onclick="inputNum(9)">9</button></td>
+                    <td><button class="number" onclick="inputNum('+')">+</button></td>
                 </tr>
                 <tr>
-                    <td><button class="number">.</button></td>
-                    <td><button class="number">0</button></td>
-                    <td><button class="number" id="equal-to">=</button></td>
-                    <td><button class="number">*</button></td>
+                    <td><button class="number" onclick="inputNum('.')">.</button></td>
+                    <td><button class="number" onclick="inputNum(0)">0</button></td>
+                    <td><button class="number" onclick="inputNum('=')" id="equal-to">=</button></td>
+                    <td><button class="number" onclick="inputNum('*')">*</button></td>
                 </tr>
             </table>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
