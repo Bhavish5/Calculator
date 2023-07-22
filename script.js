@@ -2,11 +2,18 @@ function inputNum(num){
     var string = document.getElementById("input").value;
     document.getElementById("input").value = string + num;
 }
-function clearField(){
-    document.getElementById("input").value = "";
+function clearInput(){
+    document.getElementById("input").value = " ";
 }
-function equalsAns(){
-    var ans = document.getElementById("input").value;
-    var printAns = eval(ans);
-    document.getElementById("input").value = printAns;
+function equalsTo(){
+    var ans = eval(document.getElementById("input").value);
+    document.getElementById("input").value = ans;
+}
+function isNumber(evt){
+    var inputChar = (evt.which) ? evt.which : evt.keyCode;
+    if(inputChar>=40&&inputChar<=57)
+        return true;
+    else if(inputChar=='13')
+        equalsTo();
+    return false;
 }

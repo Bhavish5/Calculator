@@ -10,8 +10,8 @@
     <h1>Calculator</h1>
     <div class="calculator">
         <div class="head">
-            <input type="text" id="input">
-            <button class="clear" onclick="clearField()">C</button>
+            <input type="text" id="input" autocomplete="off" onkeypress="return isNumber(event)">
+            <button class="clear" onclick="clearInput()">C</button>
         </div>
         <div class="body">
             <table>
@@ -36,7 +36,7 @@
                 <tr>
                     <td><button class="number" onclick="inputNum('.')">.</button></td>
                     <td><button class="number" onclick="inputNum(0)">0</button></td>
-                    <td><button class="number" onclick="equalsAns()" id="equal-to">=</button></td>
+                    <td><button class="number" onclick="equalsTo()" id="equal-to">=</button></td>
                     <td><button class="number" onclick="inputNum('*')">*</button></td>
                 </tr>
             </table>
